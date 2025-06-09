@@ -11104,8 +11104,8 @@ body {
     padding: 0;
   }
   .masthead h1, .masthead .h1 {
-    font-size: 6.5rem;
-    line-height: 6.5rem;
+    font-size: 7.5rem;
+    line-height: 7.5rem;
     letter-spacing: 0.8rem;
   }
   .masthead h2, .masthead .h2 {
@@ -11210,4 +11210,87 @@ body {
 
 .footer {
   padding: 5rem 0;
+}
+
+.carousel-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75); /* Ajuste a opacidade aqui */
+  z-index: 1;
+}
+
+.carousel-item img {
+  position: relative;
+  z-index: 0;
+}
+
+
+.masthead-carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.masthead-carousel img {
+  object-fit: cover;
+  height: 100vh;
+  width: 100%;
+}
+
+.carousel-overlay {
+  position: relative;
+  z-index: 2;
+  height: 100vh;
+}
+
+header.masthead {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.search-container {
+  background-color: white;
+  border-radius: 50px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  max-width: 500px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.search-container:hover {
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.form-control.search-input {
+  border: none;
+  background: transparent;
+  padding-left: 20px;
+  font-size: 1rem;
+  height: 50px;
+}
+
+.form-control.search-input:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.fade-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }

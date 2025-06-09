@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
           "Authorization": "Bearer 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"
         },
         body: JSON.stringify({
-          model: "llama3-8b-8192", // Você pode usar também "llama3-70b-8192"
+          model: "llama3-8b-8192",
           messages: [{ role: "user", content: prompt }],
           temperature: 0.7,
           max_tokens: 200

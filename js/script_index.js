@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const data = await response.json();
       console.log("Resposta da API recebida:", data);
 
-      const reply = data.choices?.[0]?.message?.content || "Sem resposta.";
+      const reply = data.choices?.[0]?.message?.content || "Em breve.";
       const encodedReply = encodeURIComponent(reply);
       window.location.href = `demo.html?resposta=${encodedReply}`;
 

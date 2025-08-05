@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Authorization": "Bearer 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"
+          "Authorization": "Bearer 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"
         },
         body: JSON.stringify({
           model: "llama3-8b-8192",
